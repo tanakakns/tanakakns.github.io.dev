@@ -2,6 +2,11 @@ extends ./templates/template.jade
 
 block head
   title= 'Home'
+  meta(description= 'ぺーぺーSEのブログのまとめページ。トップページ。')
 
 block content
-  p= '工事中。。。'
+  p
+    a(href='http://tanakakns.hatenablog.com/')= 'ぺーぺーSEのブログ'
+    | のまとめページ。
+  p= 'Github Pagesで作成。'
+  p= 'ぺーぺーSEのブログはエントリ単位で一応まとめっているが、１つ１つがエントリとしてバラバラで、古くなったりしてるからまとめることにした。'

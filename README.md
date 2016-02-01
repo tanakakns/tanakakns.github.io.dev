@@ -1,8 +1,10 @@
-tanakakns Github Pages
+tanakakns Github Pages Dev Project
 ====
 
-Github Pagesを作ってみた  
-チェックアプトして使用する場合、初回`npm install`をたたく
+Github Pagesを作ってみた。  
+これは開発用プロジェクト。  
+実際のGithub Pagesはdestのtanakakns.github.ioディレクトリ配下。  
+チェックアプトして使用する場合、初回`npm install`をたたく。
 
 ## 初期構築メモ
 
@@ -26,7 +28,7 @@ var gulp = require("gulp");
 
 ### プロジェクトにgulp-sass導入
 `npm install gulp-sass --save-dev`  
-※ gulp-sassはnode-sassを利用しているのでRubyのSassとは機能が若干異なります。Compassを使う場合はgulp-rubysassを使いましょう。その場合は別途RubyとSassのインストールが必要です。  
+※ gulp-sassはnode-sassを利用しているのでRubyのSassとは機能が若干異なる。Compassを使う場合はgulp-rubysassを使う。その場合は別途RubyとSassのインストールが必要。  
 ```sh
 mkdir src  
 midir src/scss  
@@ -89,7 +91,7 @@ gulp.task("sass", function() {
 });
 ```
 
-## プロジェクトにgulp-jade導入
+### プロジェクトにgulp-jade導入
 `npm install gulp-jade --save-dev`
 
 gulpfile.jsを編集  
@@ -198,8 +200,8 @@ gulp.task('build', ['sass', 'jade', 'typescript']);
 ```javascript
 var webserver = require('gulp-webserver');
  
-gulp.task('webserver', function() {
-  gulp.src('./')
+gulp.task('server', function() {
+  gulp.src('./tanakakns.github.io')
     .pipe(webserver({
       livereload: true,
       directoryListing: true,
@@ -212,11 +214,12 @@ gulp.task('webserver', function() {
 .gitignoreを作成・編集
 ```sh
 node_modules/
-tanakakns.github.io/
 !tanakakns.github.io/.git/**/*
+tanakakns.github.io/
 ```
 このignore設定をしているので、このプロジェクトは最初に`npm install`する必要あり。    
 
+### delの追加
 npm install del --save-dev  
 ```javascript
 gulp.task('clean', function () {

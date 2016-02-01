@@ -7,9 +7,12 @@ var compass = require("gulp-compass");
 var webserver = require('gulp-webserver');
 const del = require('del');
 
-gulp.task('webserver', function() {
-  gulp.src('./')
+gulp.task('server', function() {
+  gulp.src('./tanakakns.github.io')
     .pipe(webserver({
+      host: 'localhost',
+      port: 8000,
+      path: '/',
       livereload: true,
       directoryListing: true,
       open: true
@@ -23,7 +26,7 @@ gulp.task('clean', function () {
   );
 });
 
-gulp.task("sass", function() {
+gulp.task('sass', ['clean'], function() {
     gulp.src("./src/scss/**/*scss")
         .pipe(compass({
           config_file: './config.rb',
@@ -34,13 +37,13 @@ gulp.task("sass", function() {
         .pipe(gulp.dest("./tanakakns.github.io/assets/css"));
 });
 
-gulp.task("jade", function() {
+gulp.task('jade', ['clean'], function() {
     gulp.src("./src/jade/**/*jade")
         .pipe(jade())
         .pipe(gulp.dest("./tanakakns.github.io/"));
 });
 
-gulp.task("typescript", function() {
+gulp.task('typescript', ['clean'], function() {
     gulp.src("src/typescript/**/*ts")
         .pipe(typescript())
         .pipe(gulp.dest("./tanakakns.github.io/assets/js"));
