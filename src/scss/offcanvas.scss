@@ -1,0 +1,45 @@
+@import "compass/css3";
+
+html, body {
+  overflow-x: hidden;
+}
+body {
+  padding-top: 70px;
+}
+footer {
+  padding: 30px 0;
+}
+
+// Off Canvas
+$move_width : 50%;
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    @include transition-property(all);
+    @include transition-duration(.25s);
+    @include transition-timing-function(ease-out);
+  }
+  .row-offcanvas-right {
+    right: 0;
+    &.active {
+      right: $move_width; // 6 columns
+    }
+  }
+  .row-offcanvas-left {
+    left: 0;
+    &.active {
+      left: $move_width; // 6 columns
+    }
+  }
+  .row-offcanvas-right .sidebar-offcanvas {
+    right: $move_width * -1; // 6 columns
+  }
+  .row-offcanvas-left .sidebar-offcanvas {
+    left: $move_width * -1; // 6 columns
+  }
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: $move_width; // 6 columns
+  }
+}

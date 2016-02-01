@@ -1,0 +1,29 @@
+{
+  "name": "tanakakns.github.io",
+  "version": "1.0.0",
+  "description": "tanakakns Github Pages ====",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanakakns/tanakakns.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanakakns/tanakakns.github.io/issues"
+  },
+  "homepage": "https://github.com/tanakakns/tanakakns.github.io",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-typescript": "^2.10.0",
+    "gulp-webserver": "^0.9.1"
+  }
+}
