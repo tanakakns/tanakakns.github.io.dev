@@ -1,2 +1,3 @@
 node_modules/
 tanakakns.github.io/
+!tanakakns.github.io/.git/**/*

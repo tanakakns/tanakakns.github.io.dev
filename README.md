@@ -47,7 +47,7 @@ var sass = require("gulp-sass");
 gulp.task("sass", function() {
     gulp.src("src/scss/**/*scss") // MiniMatchパターン
         .pipe(sass())
-        .pipe(gulp.dest("./assets/css"));
+        .pipe(gulp.dest("./tanakakns.github.io/assets/css"));
 });
 ```
 
@@ -85,7 +85,7 @@ gulp.task("sass", function() {
     gulp.src("src/scss/**/*scss")
         .pipe(sass())
         .pipe(autoprefixer())
-        .pipe(gulp.dest("./assets/css"));
+        .pipe(gulp.dest("./tanakakns.github.io/assets/css"));
 });
 ```
 
@@ -98,7 +98,7 @@ var jade = require("gulp-jade");
 gulp.task("jade", function() {
     gulp.src("src/jade/**/*jade")
         .pipe(jade())
-        .pipe(gulp.dest("./"));
+        .pipe(gulp.dest("./tanakakns.github.io/"));
 });
 ```
 
@@ -111,7 +111,7 @@ var typescript = require("gulp-typescript");
 gulp.task("typescript", function() {
     gulp.src("src/typescript/**/*ts")
         .pipe(typescript())
-        .pipe(gulp.dest("./assets/js"));
+        .pipe(gulp.dest("./tanakakns.github.io/assets/js"));
 });
 ```
 
@@ -132,20 +132,20 @@ gulp.task("sass", function() {
     gulp.src("./src/scss/**/*scss")
         .pipe(compass({
           config_file: './config.rb',
-          css: 'assets/css',
+          css: 'tanakakns.github.io/assets/css',
           sass: 'src/scss'
         }))
         .pipe(autoprefixer())
-        .pipe(gulp.dest("./assets/css"));
+        .pipe(gulp.dest("./tanakakns.github.io/assets/css"));
 });
 ```
 
 config.rbを作成・編集  
 ```ruby
-css_dir = "assets/css"
+css_dir = "tanakakns.github.io/assets/css"
 sass_dir = "src/scss"
 images_dir = "src/img"
-javascripts_dir = "assets/js"
+javascripts_dir = "tanakakns.github.io/assets/js"
 relative_assets = true
 cache = false
 ```
@@ -212,11 +212,19 @@ gulp.task('webserver', function() {
 .gitignoreを作成・編集
 ```sh
 node_modules/
+tanakakns.github.io/
+!tanakakns.github.io/.git/**/*
 ```
 このignore設定をしているので、このプロジェクトは最初に`npm install`する必要あり。    
 
 npm install del --save-dev  
 ```javascript
+gulp.task('clean', function () {
+  return del(
+    'tanakakns.github.io/**/*',
+    '!tanakakns.github.io/.git/**/*'
+  );
+});
 ```
 
 ### 参考：  
