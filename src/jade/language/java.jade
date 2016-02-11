@@ -1,0 +1,49 @@
+extends ../templates/template.jade
+
+block head
+  title= 'Java'
+  meta(description= 'ぺーぺーSEのブログのまとめページ。Javaのページ。')
+
+block content
+  article
+    header
+      h2= 'Java'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= 'JavaEE'
+        P= 'JAX-RS'
+        p= 'JMX'
+        P= 'CDI'
+        p= 'JPA'
+        P= 'JAXB'
+        p= 'JSF'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= 'OSSライブラリ・フレームワーク'
+        p= 'JUnit'
+        p= 'Spring Framework'
+        p= 'Thymeleaf'
+        p= 'Log4j'
+        p= 'Logback'
+        p= 'Jackson'
+        p= 'Hibernate'
+        p= 'EasyMock'
+        p= 'PowerMock'
+        p= 'Mockito'
+        p= 'Commons DBCP'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= '開発ツール'
+        p='Eclipse'
+        p
+          a(href="./tool/maven.html")= 'Apache Maven'
+        p= 'Sonatype Nexus'
+        p= 'Apache JMeter'
+        p= 'Gradle'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= 'ミドルウェア'
+        p= 'Apache Tomcat'
+        p= 'JBoss EAP'
+        p= 'WebLogic'
+        p= 'GlassFish'

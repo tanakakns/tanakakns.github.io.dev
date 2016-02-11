@@ -5,143 +5,93 @@ block head
   meta(description= 'ぺーぺーSEのブログのまとめページ。メニューページ。カバーしている技術スタックの一覧。')
 
 block content
-  ul.list-group
-    li.list-group-item= '開発言語'
-      ul.list-group
-        li.list-group-item= 'Java'
-          ul.list-group
-            li.list-group-item= 'JavaSE'
-            li.list-group-item= 'JaveEE'
-              ul.list-group
-                li.list-group-item= 'JAX-RS'
-                li.list-group-item= 'JMX'
-                li.list-group-item= 'CDI'
-                li.list-group-item= 'JPA'
-                li.list-group-item= 'JAXB'
-                li.list-group-item= 'JSF'
-            li.list-group-item= 'OSSフレームワーク/ライブラリ'
-              ul.list-group
-                li.list-group-item= 'JUnit'
-                li.list-group-item= 'Spring Framework'
-                li.list-group-item= 'Thymeleaf'
-                li.list-group-item= 'Log4j'
-                li.list-group-item= 'Logback'
-                li.list-group-item= 'Jackson'
-                li.list-group-item= 'Hibernate'
-                li.list-group-item= 'EasyMock'
-                li.list-group-item= 'PowerMock'
-                li.list-group-item= 'Mockito'
-                li.list-group-item= 'Commons DBCP'
-            li.list-group-item= 'OSSツール'
-              ul.list-group
-                li.list-group-item
-                  a(href="java/maven.html")= 'Apache Maven'
-                li.list-group-item= 'Sonatype Nexus'
-                li.list-group-item= 'Apache JMeter'
-                li.list-group-item= 'Gradle'
-            li.list-group-item= 'ミドルウェア'
-              ul.list-group
-                li.list-group-item= 'Apache Tomcat'
-                li.list-group-item= 'JBoss EAP'
-                li.list-group-item= 'WebLogic'
-                li.list-group-item= 'GlassFish'
-        li.list-group-item= 'Ruby'
-          ul.list-group
-            li.list-group-item= 'Ruby on Rails'
-        li.list-group-item= 'Python'
-        li.list-group-item= 'JavaScript'
-          ul.list-group
-            li.list-group-item= 'Node.js'
-            li.list-group-item= 'Express.js'
-        li.list-group-item= 'PHP'
-    li.list-group-item= 'ミドルウェア'
-      ul.list-group
-        li.list-group-item= 'Apache Web Server'
-        li.list-group-item= 'Nginx'
-    li.list-group-item= '開発ツール'
-      ul.list-group
-        li.list-group-item= 'Eclipse'
-        li.list-group-item= 'Git'
-          ul.list-group
-            li.list-group-item= 'Github'
-            li.list-group-item= 'Gitbucket'
-        li.list-group-item= 'SVN'
-    li.list-group-item= 'フロントエンド開発ツール'
-      ul.list-group
-        li.list-group-item= 'Sublime Text'
-        li.list-group-item= 'Atom'
-        li.list-group-item= 'npm'
-        li.list-group-item= 'Grunt'
-        li.list-group-item= 'Bower'
-        li.list-group-item= 'Yeoman'
-    li.list-group-item= 'Web技術'
-      ul.list-group
-        li.list-group-item= 'REST'
-        li.list-group-item= 'XML'
-        li.list-group-item= 'JSON'
-        li.list-group-item= 'LDAP'
-          ul.list-group
-            li.list-group-item= 'OpenLDAP'
-        li.list-group-item= 'SSL'
-        li.list-group-item= '文字コード'
-    li.list-group-item= 'フロントエンドWeb技術'
-      ul.list-group
-        li.list-group-item= 'HTML'
-          ul.list-group
-            li.list-group-item= 'HTML5'
-        li.list-group-item= 'CSS'
-          ul.list-group
-            li.list-group-item= 'CSS3'
-            li.list-group-item= 'Bootstrap'
-            li.list-group-item= 'Sass'
-            li.list-group-item= 'Compass'
-        li.list-group-item= 'JavaScript'
-          ul.list-group
-            li.list-group-item= 'TypeScript'
-    li.list-group-item= '自動化ツール'
-      ul.list-group
-        li.list-group-item= 'Jenkins'
-        li.list-group-item= 'Chef'
-    li.list-group-item= 'OS'
-      ul.list-group
-        li.list-group-item= 'Windows'
-        li.list-group-item= 'Mac'
-        li.list-group-item= 'Linux'
-          ul.list-group
-            li.list-group-item= 'stat'
-            li.list-group-item= 'sar'
-    li.list-group-item= 'データベース'
-      ul.list-group
-        li.list-group-item= 'RDBMS'
-          ul.list-group
-            li.list-group-item= 'SQL'
-            li.list-group-item= 'MySQL'
-            li.list-group-item= 'Derby'
-            li.list-group-item= 'Oracle'
-        li.list-group-item= 'NoSQL'
-          ul.list-group
-            li.list-group-item= 'Couchbase'
-            li.list-group-item= 'MongoDB'
-    li.list-group-item= '仮想化'
-      ul.list-group
-        li.list-group-item= 'Vagrant'
-        li.list-group-item= 'Virtual Box'
-        li.list-group-item= 'Terraform'
-        li.list-group-item= 'Consul'
-        li.list-group-item= 'Docker'
-    li.list-group-item= 'クラウド'
-      ul.list-group
-        li.list-group-item= 'AWS'
-        li.list-group-item= 'Azure'
-        li.list-group-item= 'Heroku'
-    li.list-group-item= '監視'
-      ul.list-group
-        li.list-group-item= 'Zabbix'
-    li.list-group-item= '開発方法論'
-      ul.list-group
-        li.list-group-item= 'Agile'
-          ul.list-group
-            li.list-group-item= 'Scrum'
-        li.list-group-item= 'チケット管理ツール'
-          ul.list-group
-            li.list-group-item= 'Redmine'
+  article
+    header
+      h2= 'メニュー'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= '開発言語'
+        P
+          a(href="language/java.html")= 'Java'
+        p
+          a(href="language/javascript.html")= 'JavaScript'
+        P
+          a(href="language/ruby.html")= 'Ruby'
+        p
+          a(href="language/python.html")= 'Python'
+        P
+          a(href="language/php.html")= 'PHP'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= 'バージョン管理'
+        p
+          a(href="scm/svn.html")= 'SVN'
+        p
+          a(href="scm/git.html")= 'Git'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= 'Web技術'
+        p= 'REST'
+        p= 'XML'
+        p= 'JSON'
+        p
+          a(href="web/ldap.html")= 'LDAP'
+        p= 'SSH'
+        p= '文字コード'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= 'ミドルウェア'
+        p= 'Apache Web Server'
+        p= 'Nginx'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= 'フロントエンド'
+        p= 'HTML'
+        p
+          a(href="frontend/css.html")= 'CSS'
+        p
+          a(href="language/javascript.html")= 'JavaScript'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= '自動化'
+        p= 'Jenkins'
+        p= 'Chef'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= 'OS'
+        p= 'Windows'
+        p= 'Mac'
+        p
+          a(href="os/linux.html")= 'Linux'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= 'データベース'
+        p
+          a(href="db/rdbms.html")= 'RDBMS'
+        p
+          a(href="db/nosql.html")= 'NoSQL'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= '仮想化'
+        p= 'Vagrant'
+        p= 'Virtual Box'
+        p= 'Terraform'
+        P= 'Consul'
+        p= 'Docker'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= 'クラウド'
+        p= 'AWS'
+        p= 'Azure'
+        p= 'Heroku'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= '監視'
+        p= 'Zabbix'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= '開発方法論'
+        p
+          a(href="methodology/agile.html")= 'Agile'
+        p
+          a(href="methodology/ticket.html")= 'チケット管理ツール'
