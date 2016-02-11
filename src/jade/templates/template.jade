@@ -4,6 +4,9 @@ html(lang="ja")
   include ../includes/head.jade
   
   body
+    //- タイトル
+    include ../includes/title.jade
+    
     //- ナビゲーション
     //- include ../includes/nav.jade
     
@@ -17,8 +20,6 @@ html(lang="ja")
         
         //- コンテンツ
         div.col-xs-12.col-sm-9
-          //- タイトル
-          include ../includes/title.jade
           
           //- ========== ↓編集対象↓ ==========
           block content
