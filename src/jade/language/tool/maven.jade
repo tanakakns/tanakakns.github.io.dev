@@ -15,7 +15,25 @@ block content
   article
     header
       h2= 'Apache Maven'
-    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
-      section
-        h3= 'プロジェクト作成コマンド'
-        p= 'mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart'
+    section
+      h3= 'プロジェクト作成コマンド'
+      br
+      p= 'Quick Start for DOS'
+      pre
+        code
+          | mvn archetype:generate ^
+          |     -DarchetypeGroupId=org.apache.maven.archetypes ^
+          |     -DarchetypeArtifactId=maven-archetype-quickstart ^
+          |     -DgroupId=org.sample ^
+          |     -DartifactId=sample ^
+          |     -Dversion=1.0-SNAPSHOT
+      br
+      p= 'Quick Start for Linux'
+      pre.prettyprint
+        code.lang-bsh
+          | mvn archetype:generate \
+          |     -DarchetypeGroupId=org.apache.maven.archetypes \
+          |     -DarchetypeArtifactId=maven-archetype-quickstart \
+          |     -DgroupId=org.sample \
+          |     -DartifactId=sample \
+          |     -Dversion=1.0-SNAPSHOT
