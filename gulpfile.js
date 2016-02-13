@@ -6,7 +6,8 @@ var typescript = require("gulp-typescript");
 var compass = require("gulp-compass");
 var webserver = require('gulp-webserver');
 const del = require('del');
-
+var sitemap = require('gulp-sitemap');
+ 
 gulp.task('server', function() {
   gulp.src('./tanakakns.github.io')
     .pipe(webserver({
@@ -38,7 +39,9 @@ gulp.task('sass', ['clean'], function() {
 });
 
 gulp.task('jade', ['clean'], function() {
-    gulp.src("./src/jade/**/*jade")
+    gulp.src(['./src/jade/**/*jade', 
+              '!./src/jade/templates/*jade',
+              '!./src/jade/includes/*jade'])
         .pipe(jade())
         .pipe(gulp.dest("./tanakakns.github.io/"));
 });
@@ -47,6 +50,14 @@ gulp.task('typescript', ['clean'], function() {
     gulp.src("src/typescript/**/*ts")
         .pipe(typescript())
         .pipe(gulp.dest("./tanakakns.github.io/assets/js"));
+});
+
+gulp.task('sitemap', function () {
+    gulp.src('tanakakns.github.io/**/*.html')
+        .pipe(sitemap({
+            siteUrl: 'https://tanakakns.github.io'
+        }))
+        .pipe(gulp.dest('./tanakakns.github.io'));
 });
 
 gulp.task('build', ['sass', 'jade', 'typescript']);

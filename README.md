@@ -220,7 +220,7 @@ tanakakns.github.io/
 このignore設定をしているので、このプロジェクトは最初に`npm install`する必要あり。    
 
 ### delの追加
-npm install del --save-dev  
+`npm install del --save-dev`  
 ```javascript
 gulp.task('clean', function () {
   return del(
@@ -229,6 +229,20 @@ gulp.task('clean', function () {
   );
 });
 ```
+
+### gulp-sitemapの追加
+`npm install gulp-sitemap --save-dev`  
+```javascript
+var sitemap = require('gulp-sitemap');
+ 
+gulp.task('sitemap', ['jade'], function () {
+    gulp.src('tanakakns.github.io/**/*.html')
+        .pipe(sitemap({
+            siteUrl: 'https://tanakakns.github.io'
+        }))
+        .pipe(gulp.dest('./tanakakns.github.io'));
+});```
+
 
 ### 参考：  
 http://liginc.co.jp/web/tutorial/117900  
