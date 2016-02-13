@@ -5,7 +5,10 @@ html(lang="ja")
   
   body
     //- タイトル
-    include ../includes/title.jade
+    div.hidden-xs
+      include ../includes/title.jade
+    div.visible-xs
+      include ../includes/title_mobile.jade
     
     //- ナビゲーション
     div.visible-xs
