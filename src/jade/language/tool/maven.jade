@@ -5,6 +5,13 @@ block head
   meta(description= 'ぺーぺーSEのブログのまとめページ。Mavenのページ。')
 
 block content
+  ol.breadcrumb
+    li
+      a(href="/menu.html")= 'Menu'
+    li
+      a(href="/language/java.html")= 'Java'
+    li.acrive
+      a(href="/language/tool/maven.html")= 'Apache Maven'
   article
     header
       h2= 'Apache Maven'
