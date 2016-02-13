@@ -5,9 +5,12 @@ block head
   meta(description= 'ぺーぺーSEのブログのまとめページ。自己紹介ページ。')
 
 block content
-  P= 'ぺーぺーSEです。'
-  p
-    a(href='http://tanakakns.hatenablog.com/')= 'ぺーぺーSEのブログ'
-    | をまとめるためにこのGithub Pasesを作りました。
-  p= '某SIerでJava系のソフトアーキやってます。'
-  p= 'このサイトからもわかる通り、Java系以外にも手ー出してます。'
+  article
+    header
+      h2= 'About Me'
+    P= 'ぺーぺーSEです。'
+    p
+      a(href='http://tanakakns.hatenablog.com/')= 'ぺーぺーSEのブログ'
+      | をまとめるためにこのGithub Pasesを作りました。
+    p= '某SIerでJava系のソフトアーキやってます。'
+    p= 'このサイトからもわかる通り、Java系以外にも手ー出してます。'

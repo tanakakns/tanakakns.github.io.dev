@@ -1,14 +1,17 @@
 h1.text-center(style="background-color: #0000CF;")
   font(style="color: #ffffff;")= 'ぺーぺーSE まとめるまとめ'
-//- Google Adsense github_head
-script(async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
-center
-  ins.adsbygoogle(style="display:inline-block;width:728px;height:90px", data-ad-client="ca-pub-0116602540349648", data-ad-slot="6482308220")
-script
-  | (adsbygoogle = window.adsbygoogle || []).push({});
-//- Google Adsense github_head_responsive
-//- script(async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
-//- center
-  ins.adsbygoogle(style="display:block", data-ad-client="ca-pub-0116602540349648", data-ad-slot="1155628221", data-ad-format="auto")
-//- script
-  | (adsbygoogle = window.adsbygoogle || []).push({});
+//- Google Adsense
+div.hidden-xs
+  //- github_head
+  script(async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
+  center
+    ins.adsbygoogle(style="display:inline-block;width:728px;height:90px", data-ad-client="ca-pub-0116602540349648", data-ad-slot="6482308220")
+  script
+    | (adsbygoogle = window.adsbygoogle || []).push({});
+div.visible-xs
+  //- github_head_mobile
+  script(async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
+  center
+    ins.adsbygoogle(style="display:inline-block;width:320px;height:100px", data-ad-client="ca-pub-0116602540349648", data-ad-slot="4522407023")
+  script
+    | (adsbygoogle = window.adsbygoogle || []).push({});
