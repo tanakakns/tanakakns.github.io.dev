@@ -19,8 +19,8 @@ block content
       h3= 'プロジェクト作成コマンド'
       br
       p= 'Quick Start for DOS'
-      pre
-        code
+      pre.prettyprint
+        code.lang-bsh
           | mvn archetype:generate ^
           |     -DarchetypeGroupId=org.apache.maven.archetypes ^
           |     -DarchetypeArtifactId=maven-archetype-quickstart ^
