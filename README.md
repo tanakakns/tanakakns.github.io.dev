@@ -249,6 +249,17 @@ headにSyntaxHighlighterのJSとCSSをCDNから追加。
 http://www.oikawa-sekkei.com/web/design/js/  
 http://alexgorbatchev.com/SyntaxHighlighter/  
 https://cdnjs.com/libraries/SyntaxHighlighter  
+HTML（ここではjade）のheadタグ内に下記を追加。
+```jade
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushBash.js")
+  link(href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCoreDefault.css", rel="stylesheet")
+  link(href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.css", rel="stylesheet")
+  script(type="text/javascript")
+    | SyntaxHighlighter.all()
+```
+bowerにもあったが、トラぶったのと、そろそろバージョン４が出そうな感じだったので様子見で見送り。  
+
 
 ### 参考：  
 http://liginc.co.jp/web/tutorial/117900  
