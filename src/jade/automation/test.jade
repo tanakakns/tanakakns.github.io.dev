@@ -1,0 +1,22 @@
+extends ../templates/template.jade
+
+block head
+  title= '自動テスト'
+  meta(description= 'ぺーぺーSEのブログのまとめページ。自動テストのページ。')
+
+block content
+  article
+    header
+      h2= '自動テスト'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= '未整理リンク'
+        br
+        a(href="http://blog.trident-qa.com/2014/12/make-selenium-report-more-stylish/")= 'Seleniumのテスト結果レポートをもっとおしゃれに'
+        br
+        a(href="https://www.htmlhifive.com/conts/web/view/pitalium/WebHome#H30C130E530FC30C830EA30A230EB")= 'Pitalium(hifiveリグレッションテストライブラリ)'
+        br
+        a(href="http://www.slideshare.net/kotaroogino/2015-stac2015")= '【システムテスト自動化カンファレンス2015】 楽天の品質改善を加速する継続的システムテストパターン #stac2015'
+        br
+        a(href="http://yuuki.hatenablog.com/entry/mackerel-serverspec")= 'Serverspec + Mackerel APIによるインフラテストの実運用化'
+        br

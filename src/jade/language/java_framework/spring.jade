@@ -1,0 +1,38 @@
+extends ../../templates/template.jade
+
+block head
+  title= 'Spring Framework'
+  meta(description= 'ぺーぺーSEのブログのまとめページ。Spring Frameworkのページ。')
+
+block content
+  ol.breadcrumb
+    li
+      a(href="/menu.html")= 'Menu'
+    li
+      a(href="/language/java.html")= 'Java'
+    li.acrive
+      a(href="/language/java_framework/spring.html")= 'Apache Maven'
+  article
+    header
+      h2= 'Spring Framework'
+    section
+      h3= '未整理リンク'
+      br
+      a(href="http://matsumana.info/blog/2014/12/02/spring-boot-connection-pooling/")= 'Spring Bootのコネクションプーリングの比較'
+      br
+      a(href="http://jsug-spring-boot-handson.readthedocs.org/en/latest/index.html")= 'Spring Bootハンズオン'
+      br
+      a(href="http://okazuki.hatenablog.com/entry/2015/07/13/213211")= 'Spring BootでバリデーションのメッセージをValidationMessages.properties以外にする'
+      br
+      a(href="http://www.slideshare.net/makingx/spring-boot-13-news-java")= 'Spring Boot 1.3 News #渋谷Java'
+      br
+      a(href="http://blog.okazuki.jp/entry/2015/07/14/205627")= 'Spring Bootでコントローラの単体テスト'
+      br
+      a(href="http://blogs.sourceallies.com/2011/08/spring-injection-with-resource-and-autowired/")= 'Spring Injection with @Resource, @Autowired and @Inject'
+      br
+      a(href="https://docs.spring.io/spring-boot/docs/current/reference/html/")= 'Spring Boot Reference Guide'
+      br
+      a(href="http://docs.spring.io/spring-data/data-jpa/docs/1.3.4.RELEASE/reference/html/jpa.repositories.html#jpa.query-methods.query-creation")= 'data-jpa'
+      br
+      a(href="http://masatoshitada.hatenadiary.jp/entry/2015/12/05/135825")= '@Transactional(Spring Framework)のpropagation属性'
+      br

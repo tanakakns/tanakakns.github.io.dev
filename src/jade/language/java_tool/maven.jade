@@ -1,0 +1,72 @@
+extends ../../templates/template.jade
+
+block head
+  title= 'Apache Maven'
+  meta(description= 'ぺーぺーSEのブログのまとめページ。Mavenのページ。')
+
+block content
+  ol.breadcrumb
+    li
+      a(href="/menu.html")= 'Menu'
+    li
+      a(href="/language/java.html")= 'Java'
+    li.acrive
+      a(href="/language/java_tool/maven.html")= 'Apache Maven'
+  article
+    header
+      h2= 'Apache Maven'
+    section
+      h3= 'プロジェクト作成コマンド'
+      br
+      p= 'Quick Start for DOS'
+      pre(class="brush:shell")
+        | mvn archetype:generate ^
+        |     -DarchetypeGroupId=org.apache.maven.archetypes ^
+        |     -DarchetypeArtifactId=maven-archetype-quickstart ^
+        |     -DgroupId=org.sample ^
+        |     -DartifactId=sample ^
+        |     -Dversion=1.0-SNAPSHOT
+      br
+      p= 'Quick Start for Linux'
+      pre(class="brush:shell")
+        | mvn archetype:generate \
+        |     -DarchetypeGroupId=org.apache.maven.archetypes \
+        |     -DarchetypeArtifactId=maven-archetype-quickstart \
+        |     -DgroupId=org.sample \
+        |     -DartifactId=sample \
+        |     -Dversion=1.0-SNAPSHOT
+      br
+      p= 'Java EE 7 for Windows'
+      pre(class="brush:shell")
+        | mvn archetype:generate ^
+        |     -DarchetypeGroupId=org.codehaus.mojo.archetypes ^
+        |     -DarchetypeArtifactId=webapp-javaee7 ^
+        |     -DarchetypeVersion=0.3-SNAPSHOT ^
+        |     -DarchetypeRepository=https://nexus.codehaus.org/content/repositories/snapshots/ ^
+        |     -DgroupId=your_group_id ^
+        |     -DartifactId=your_artifact_id ^
+        |     -Dversion=your_version ^
+        |     -Dpackage=your_package ^
+        |     -Darchetype.interactive=false ^
+        |     --batch-mode ^
+        |     --update-snapshots 
+      br
+      p= 'Java EE 7 for Linux'
+      pre(class="brush:shell")
+        | mvn archetype:generate \
+        |     -DarchetypeGroupId=org.codehaus.mojo.archetypes \
+        |     -DarchetypeArtifactId=webapp-javaee7 \
+        |     -DarchetypeVersion=0.3-SNAPSHOT \
+        |     -DarchetypeRepository=https://nexus.codehaus.org/content/repositories/snapshots/ \
+        |     -DgroupId=your_group_id \
+        |     -DartifactId=your_artifact_id \
+        |     -Dversion=your_version \
+        |     -Dpackage=your_package \
+        |     -Darchetype.interactive=false \
+        |     --batch-mode \
+        |     --update-snapshots
+      br
+    section
+      h3= '未整理リンク'
+      br
+      a(href="http://d.hatena.ne.jp/tagomoris/20141028/1414485679")= 'Qはじめてのmaven central 公開'

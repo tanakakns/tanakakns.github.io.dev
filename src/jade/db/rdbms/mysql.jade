@@ -1,0 +1,38 @@
+extends ../../templates/template.jade
+
+block head
+  title= 'MySQL'
+  meta(description= 'ぺーぺーSEのブログのまとめページ。MySQLのページ。')
+
+block content
+  article
+    header
+      h2= 'MySQL'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= '未整理リンク'
+        br
+        a(href="http://hack.aipo.com/archives/303/")= 'MySQLでデータベースを丸ごと複製'
+        br
+        a(href="http://d.hatena.ne.jp/graySpace/20140917/1410919764")= 'MySQLでのレプリケーション'
+        br
+        a(href="http://enterprisezine.jp/dbonline/detail/6123")= 'SQLの観点から「Oracle Database」「PostgreSQL」 「MySQL」の特徴を整理しよう！'
+        br
+        a(href="http://freefielder.jp/blog/2012/03/mysql-1.html")= 'MySQLでバイナリログを削除したら立ち上がらなくなったので直す。'
+        br
+        a(href="http://www.risewill.co.jp/blog/archives/195")= 'mysqldumpの使い方 オプション編'
+        br
+        a(href="http://l-w-i.net/t/mysql/replication_100.txt")= 'MySQLレプリケーションの同期が取れなくなった場合の復旧方法'
+        br
+        a(href="http://cloud.gmo.jp/docs/objectstorage/mysqldump/")= 'MySQLのmysqldumpをオブジェクトストレージへ保存する'
+        br
+        a(href="http://takeshiyako.blogspot.jp/2014/10/mysql.html")= 'MySQLスレーブの整合性を保つための３つの設定'
+        br
+        a(href="http://bizstation.hatenablog.com/entry/2014/12/24/103641")= 'MySQL/MariaDBとTransactdのInnoDBロック制御詳細　その1'
+        br
+        a(href="http://blog.memolib.com/memo/118/")= 'MySQLがクラッシュした時にやったこと'
+        br
+        a(href="https://yakst.com/ja/posts/109")= 'MySQLのためのLinuxチューニングヒント'
+        br
+        a(href="http://wakariyasui.hatenablog.jp/entry/2015/04/28/005109")= 'MySQLでToo many connectionsが起きた場合の対処方法'
+        br

@@ -31,13 +31,15 @@ block content
     div.col-xs-6.col-sm-4.col-md-3.col-lg-3
       section
         h3= 'Web技術'
-        p= 'REST'
+        a(href="web/rest.html")= 'REST'
+        br
         p= 'XML'
         p= 'JSON'
         p
           a(href="web/ldap.html")= 'LDAP'
         p= 'SSH'
-        p= '文字コード'
+        br
+        a(href="web/encoding.html")= '文字コード'
     div.col-xs-6.col-sm-4.col-md-3.col-lg-3
       section
         h3= 'ミドルウェア'
@@ -54,8 +56,14 @@ block content
     div.col-xs-6.col-sm-4.col-md-3.col-lg-3
       section
         h3= '自動化'
-        p= 'Jenkins'
-        p= 'Chef'
+        a(href="automation/jenkins.html")= 'Jenkins'
+        br
+        a(href="automation/test.html")= 'テスト'
+        br
+        a(href="automation/chef.html")= 'Chef'
+        br
+        a(href="automation/log_aggregation.html")= 'ログ収集'
+        br
     div.col-xs-6.col-sm-4.col-md-3.col-lg-3
       section
         h3= 'OS'
@@ -73,21 +81,24 @@ block content
     div.col-xs-6.col-sm-4.col-md-3.col-lg-3
       section
         h3= '仮想化'
-        p= 'Vagrant'
-        p= 'Virtual Box'
-        p= 'Terraform'
-        P= 'Consul'
-        p= 'Docker'
+        a(href="virtualization/hashicorp.html")= 'Hashicorp'
+        br
+        a(href="virtualization/docker.html")= 'Docker'
     div.col-xs-6.col-sm-4.col-md-3.col-lg-3
       section
         h3= 'クラウド'
-        p= 'AWS'
+        a(href="cloud/aws.html")= 'AWS'
+        br
         p= 'Azure'
         p= 'Heroku'
     div.col-xs-6.col-sm-4.col-md-3.col-lg-3
       section
         h3= '監視'
-        p= 'Zabbix'
+        a(href="./monitoring/zabbix.html")= 'Zabbix'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= 'セキュリティ'
+        a(href="./security/encryption.html")= '暗号化'
     div.col-xs-6.col-sm-4.col-md-3.col-lg-3
       section
         h3= '開発方法論'

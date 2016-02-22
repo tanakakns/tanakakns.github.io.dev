@@ -1,0 +1,20 @@
+extends ../templates/template.jade
+
+block head
+  title= 'REST'
+  meta(description= 'ぺーぺーSEのブログのまとめページ。RESTのページ。')
+
+block content
+  article
+    header
+      h2= 'REST'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= '未整理リンク'
+        br
+        a(href="http://d.hatena.ne.jp/thata/20100207/1265554365")= 'urlコマンドからのRESTなリクエストを送り方'
+        br
+        a(href="http://qiita.com/kawasima/items/38a4594b197d4011e193")= 'サーバサイドで複数Web APIを呼び出すときのデザインパターン'
+        br
+        a(href="http://qiita.com/tkawa/items/2841e155e5b51c09ed40")= 'Web APIにはJSONベースのフォーマットを使おう'
+        br

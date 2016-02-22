@@ -1,0 +1,28 @@
+extends ../templates/template.jade
+
+block head
+  title= 'Hashicorp'
+  meta(description= 'ぺーぺーSEのブログのまとめページ。Hashicorpのページ。')
+
+block content
+  article
+    header
+      h2= 'Hashicorp'
+    div.col-xs-6.col-sm-4.col-md-3.col-lg-3
+      section
+        h3= '未整理リンク'
+        br
+        a(href="http://www.slideshare.net/zembutsu/introduce-orchestration-serf-and-consul-presentation")= 'Serf / Consul 入門 ～仕事を楽しくしよう～'
+        br
+        a(href="http://blog.cloudpack.jp/2014/12/19/serf-my-first-orchestration-tool-vol1-install-launch-agent/")= 'Serfはじめての運用ツール～インストールとエージェント起動'
+        br
+        a(href="http://labs.gree.jp/blog/2014/12/11959/")= 'オーケストレーション入門 多種多様化するサービスをConsulで連携させる'
+        br
+        a(href="http://www.atmarkit.co.jp/ait/articles/1502/10/news050.html")= 'エンタープライズでもInfrastructure as Code――Chef 12／Chef-Zero／Knife-Zeroの基礎知識とインストール (1/2)'
+        br
+        a(href="http://www.slideshare.net/udzura/consul-47144848")= 'Consul は 全自動オーケストレーションの 夢を見るか?'
+        br
+        a(href="http://www.slideshare.net/zembutsu/hashicorp-orchestration-tools-introduction")= 'Hashicorpのツール群とオーケストレーション'
+        br
+        a(href="http://www.slideshare.net/zembutsu/automation-myth-we-can-advance")= '運用に自動化を求めるのは間違っているだろうか'
+        br

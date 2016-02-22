@@ -1,0 +1,49 @@
+extends ../templates/template.jade
+
+block head
+  title= 'Zabbix'
+  meta(description= 'ぺーぺーSEのブログのまとめページ。Zabbixのページ。')
+
+block content
+  ol.breadcrumb
+    li
+      a(href="/menu.html")= 'Menu'
+    li.active
+      a(href="/monitoring/zabbix.html")= 'Zabbix'
+  article
+    header
+      h2= 'Zabbix'
+    section
+      h3= '監視対象一覧'
+      br
+      p= 'リソース監視'
+      p= '死活監視'
+      p= 'サービス監視'
+      p= 'ログ監視'
+      p= '性能監視'
+      p= 'HW監視'
+      p= 'SQL監視'
+      p= 'セキュリティ監視（変更検知、とか）'
+    section
+      h3= '未整理リンク'
+      br
+      a(href="http://www.slideshare.net/ikedai/zabbixjob-scheduleross")= 'Zabbixとjob scheduler連携による運用システムoss化の実現'
+      br
+      a(href="http://blog.glidenote.com/blog/2014/12/03/monitoring-system-version-dec-2014/")= '監視アーキテクチャ(Sensu,Pingdom,Mackerel,StatusPage.io,PagerDuty)についてまとめてみる(2014年12月版)'
+      br
+      a(href="http://blog.serverworks.co.jp/tech/2014/12/01/zabbix-odbc/")= 'ZabbixによるMS SQL監視 ～ODBC監視機能の解説～'
+      br
+      a(href="http://www.slideshare.net/rrreeeyyy117/ss-44072323")= 'モニタリングシステムのこれまでとこれから'
+      br
+      a(href="http://knowledge.sakura.ad.jp/tech/2917/")= 'Zabbixで作るサーバー監視環境（Zabbix 2.4対応版）'
+      br
+      a(href="http://www.slideshare.net/ShinsukeYokota/zabbixaws-46431083")= 'ZabbixによるAWS監視のコツ'
+      br
+      a(href="http://tech.innova-jp.com/monitor-structure-for-startup/")= 'スタートアップ向け監視設計入門'
+      br
+      a(href="http://www.slideshare.net/ikedai/8oss-zabbixzabbix30")= '第8回oss運用管理勉強会 Zabbix入門＆Zabbix3.0先取り紹介'
+      br
+      a(href="http://www.slideshare.net/zembutsu/zabbix-conference-2015-triage-and-operations")= '障害対応・運用におけるトリアージ的対応とZabbixの活用'
+      br
+      a(href="http://pocketstudio.jp/log3/2015/12/09/why-zabbix/")= '諸君、私は運用が大好きだ！私がZabbixを導入した根本的な理由'
+      br
