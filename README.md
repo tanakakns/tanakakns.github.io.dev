@@ -241,7 +241,8 @@ gulp.task('sitemap', ['jade'], function () {
             siteUrl: 'https://tanakakns.github.io'
         }))
         .pipe(gulp.dest('./tanakakns.github.io'));
-});```
+});
+```
 
 ### SyntaxHighlighterの追加
 headにSyntaxHighlighterのJSとCSSをCDNから追加。  
