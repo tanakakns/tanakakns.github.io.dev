@@ -1,0 +1,226 @@
+extends ../../templates/template.jade
+
+block head
+  title= 'Gitコマンドの使い方'
+  meta(description= 'ぺーぺーSEのブログのまとめページ。Gitコマンドの使い方ページ。')
+
+block content
+  article
+    header
+      h2= 'Gitコマンドの使い方'
+      hr
+      p= 'ここではGitの基本的なコマンドをまとめる。'
+      br
+      section
+        h3= 'ローカル環境の設定'
+        hr
+        pre= '$　git init'
+        p
+          | カレントディレクトリに『
+          strong= '.git'
+          | 』ディレクトリを作成し、ローカルリポジトリとする。
+        br
+        pre= '$　git clone　<Remote Repository>'
+        p= 'リモートリポジトリからローカルリポジトリを複製する。'
+        br
+        pre= '$　git config'
+        p= 'Gitクライアントの設定を行う。'
+        br
+        br
+      section
+        h3= 'ローカル操作'
+        hr
+        h4= 'Gitの保存領域'
+        p= 'Gitの穂本領域には以下の４つがある。'
+        dl.dl-horizontal
+          dt= 'ワーキングディレクトリ'
+          dd
+            | 作業スペース。編集中のファイルがある。
+            strong= 'ワークツリー'
+            | ともいう。
+          dt= 'ステージングエリア'
+          dd
+            | コミットする内容をた保存するスペース。
+            strong= 'インデックス'
+            | ともいう。
+          dt= 'ローカルリポジトリ'
+          dd
+            | コミットするとステージングエリアの内容がローカルリポジトリに保存される。
+          dt= 'リモートリポジトリ'
+          dd
+            | ローカル以外のすべてのリモートリポジトリをいう。
+        br
+        p= 'ワーキングディレクトリからローカルリポジトリまでには以下の操作がある。'
+        br
+        pre= '$　git add <filename>'
+        p
+          | ワーキングディレクトリの変更をステージングエリアに反映する
+          | （ワーキングディレクトリ → ステージングエリア）。
+          strong= 'ステージング'
+          | という。
+        br
+        pre= '$　git commit'
+        p
+          | ステージングエリアの内容をローカルリポジトリに反映する
+          | （ステージングエリア → ローカルリポジトリ）。
+          strong= 'コミット'
+          | という。
+        br
+        pre= '$　git status'
+        p
+          | ワーキングディレクトリとステージングエリアの変更状況を表示する。
+          br
+          span(style="color:red")= '赤'
+          | はワーキングディレクトリ、
+          span(style="color:blue")= '青'
+          | はステージングエリアの変更を表す。
+        br
+        pre= '$　git log'
+        p= 'コミットによるローカルリポジトリの変更を表示する。'
+        br
+        pre= '$　git diff'
+        p= 'ワーキングディレクトリとステージングエリアを比較する。'
+        br
+        pre= '$　git checkout'
+        p= 'リビジョンを切り替える。'
+        br
+        pre= '$　git commit --amend'
+        p= '直前のコミットを削除してステージングエリアが１つ前の状態に戻る。'
+        br
+        pre= '$　git revert'
+        p
+          | 過去のコミットを削除する（ワーキングディレクトリの内容も戻る）。
+          br
+          | 『$ 
+          strong= 'git revert HEAD~'
+          | 』と実行するとHEADの１つ前の変更を削除する。
+          br
+          strong= 'HEAD'
+          | は現在のブランチの先頭、最新コミットへのポインタを表す。
+        br
+        pre= '$　git reset'
+        p
+          | 変更（コミット）を取り消し、指定したリビジョンまで戻る。
+          br
+          | 後述するが、マージの取り消しにも使用できる。
+          br
+          | 『$ 
+          strong= 'git revert HEAD~2'
+          | 』と実行するとHEADの2つ前の状態まで戻る。
+          br
+          | resetには「
+          strong= 'soft'
+          | 」「
+          strong= 'mixed'
+          | 」「
+          strong= 'hard'
+          | 」の3つのモードがあり、それぞれ下表のようになる。
+        br
+        table.table
+          thead
+            tr
+              th= 'モード'
+              th= 'ヘッドの位置'
+              th= 'ステージングエリア'
+              th= 'ワーキングディレクトリ'
+          tbody
+            tr
+              td= 'soft'
+              td= '変更する'
+              td= '変更しない'
+              td= '変更しない'
+            tr
+              td= 'mixed'
+              td= '変更する'
+              td= '変更する'
+              td= '変更しない'
+            tr
+              td= 'hard'
+              td= '変更する'
+              td= '変更する'
+              td= '変更する'
+        br
+        br
+      section
+        h3= 'リモート操作'
+        hr
+        pre= 'git push'
+        p
+          | リモートリポジトリにローカルリポジトリの変更を反映する。
+        br
+        pre= 'git pull'
+        p
+          | リモートリポジトリから変更を取得する（マージまで行う）。
+          br
+          | 『$ 
+          strong= 'git fetch'
+          | 』＋『$ 
+          strong= 'git merge origin/master'
+          | 』に同じ。
+        br
+        pre= 'git fetch'
+        p
+          | リモートリポジトリから最新の変更をローカルリポジトリに持ってくる（マージは行わない）。
+        br
+        blockquote
+          h4.h4
+            strong= 'master'
+            | と
+            strong= 'origin/master'
+            | の違い
+          p.h5
+            | 「master」はローカルリポジトリのmasterブランチを指し、
+            | 「origin/master」はリモートリポジトリのmasterブランチを指す。
+            br
+            | ただし、「origin/master」はリモートリポジトリと結びついているブランチであって、ローカルに存在する。
+            | 『$ 
+            strong= 'git fetch'
+            | 』することによって、ローカルの「origin/master」が更新される。
+            br
+            | つまり、『$ 
+            strong= 'git fetch'
+            | 』した後に『$ 
+            strong= 'git merge origin/master'
+            | 』すると、「ローカルのmasterブランチに、最新状態に更新した「origin/master」の変更をマージする」ということになる。
+        br
+        br
+      section
+        h3= 'ブランチ操作'
+        hr
+        pre= 'git branch'
+        p
+          | ブランチの一覧を表示する。
+        br
+        pre= 'git branch <branchname>'
+        p
+          | ブランチを作成する（現在のブランチのリビジョンで作成される）。
+        br
+        pre= 'git branch -d <branchname>'
+        p
+          | ブランチを削除する。
+        br
+        pre= 'git branch <branchname>/<revision>'
+        p
+          | ブランチを切り替える。リビジョンへの切り替えもできる。
+        br
+        pre= 'git merge <branch>'
+        p
+          | 現在のブランチへ指定のブランチをマージする。
+          br
+          | コンフリクトが発生するとコンフリクトが発生したファイルを修正してaddとcommit（メッセージは自動生成）を実行する必要がある。
+        br
+        pre= 'git reset　<revision>'
+        p
+          | 変更（マージ）の取り消し、指定したリビジョンまで戻る。
+        br
+        pre= 'git rebase <branchname>'
+        p
+          | 指定したブランチのHEADに現在のブランチの変更を追加する。
+          br
+          | 例えば、『$ 
+          strong= 'git rebase master'
+          | 』を実行すると、現在のブランチをmaster(HEAD)から作成したことにする。
+          br
+          | 競合が発生した場合は修正の後、『$ 
+          strong= 'git rebase --continue'
+          | 』を実行する。
